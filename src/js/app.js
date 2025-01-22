@@ -1,5 +1,8 @@
-import showHealth from './health';
-
-console.log('worked');
-
-showHealth(70);
+export default function healthIndicator(object) {
+    if (object.health > 50) {
+        return 'healthy';
+    } if (object.health > 15) {
+        return 'wounded';
+    }
+    return 'critical';
+}
